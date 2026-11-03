@@ -1,6 +1,8 @@
 # Beauty Wow Iași — model website
 
-Site static de prezentare pentru Salon Beauty Wow din Iași.
+Site static de prezentare, cu mai multe pagini, pentru Salon Beauty Wow din Iași.
+
+Pagini incluse: Acasă, Servicii, Despre, Galerie și Contact.
 
 ## Rulare locală
 
