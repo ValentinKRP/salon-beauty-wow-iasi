@@ -1,4 +1,4 @@
-# Beauty Wow Iași — model website
+# Salon Beauty Wow Iași — model website
 
 Site static de prezentare, cu mai multe pagini, pentru Salon Beauty Wow din Iași.
 
