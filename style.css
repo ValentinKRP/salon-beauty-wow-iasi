@@ -5,6 +5,7 @@
   --muted: #6b675f;
   --sage: #788275;
   --clay: #a87968;
+  --contact: #74564f;
   --white: #fffdf9;
   --line: rgba(36, 35, 31, 0.18);
 }
@@ -342,7 +343,8 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .lightbox-close { position: absolute; top: 14px; right: 22px; border: 0; background: transparent; color: var(--white); font-size: 42px; font-weight: 300; cursor: pointer; }
 
 .contact-page { min-height: calc(100vh - 84px); display: grid; grid-template-columns: 1fr 1fr; }
-.contact-panel { padding: 100px 8vw; background: var(--sage); color: var(--white); }
+.contact-panel { padding: 100px 8vw; background: var(--contact); color: var(--white); }
+.contact-panel .eyebrow { color: #f0d9ca; }
 .contact-panel h1 { font-size: clamp(55px, 6vw, 92px); }
 .contact-panel > p:not(.eyebrow) { color: rgba(255,255,255,.7); max-width: 530px; }
 .contact-cards { margin-top: 65px; border-top: 1px solid rgba(255,255,255,.3); }
