@@ -2,3 +2,11 @@
 Thumbs.db
 .vercel
 node_modules
+
+# Materiale originale primite de la clientă; site-ul folosește selecția optimizată din assets/
+coafor-stylyng/
+cosmetica-gene-laminare/
+frizeriebarber/
+manichiurapedichiura/
+videos/
+poza-intrare -salon.jpeg

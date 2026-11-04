@@ -1,22 +1,77 @@
 <!doctype html>
-<html lang="ro"><head>
+<html lang="ro">
+<head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Galerie Salon Beauty Wow Iași — inspirație pentru păr, manichiură, machiaj și îngrijire.">
-  <title>Galerie — Salon Beauty Wow Iași</title>
+  <meta name="description" content="Galerie cu lucrări reale Salon Beauty Wow Tătărași Iași: balayage, Airtouch, coafuri, manichiură, cosmetică și frizerie.">
+  <title>Galerie lucrări | Salon Beauty Wow Tătărași Iași</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
-</head><body>
+</head>
+<body>
   <header class="site-header"><a class="brand" href="index.html"><img class="brand-logo" src="logo-salon-beauty-wow.jpeg" alt=""><span class="brand-name">Salon Beauty Wow</span></a><button class="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span></button><nav class="main-nav"><a href="servicii.html">Servicii</a><a href="despre.html">Despre</a><a class="active" href="galerie.html">Galerie</a><a href="contact.html">Contact</a></nav><a class="header-contact" href="https://wa.me/40755331403" target="_blank" rel="noopener">Scrie-ne</a></header>
   <main>
-    <section class="inner-hero inner-hero-gallery"><div><p class="eyebrow">Galerie</p><h1>Inspirație în<br><em>fiecare detaliu.</em></h1></div><p>Imaginile sunt demonstrative și vor fi înlocuite cu lucrările reale ale salonului, organizate pe categorii.</p></section>
-    <section class="portfolio section">
-      <figure class="portfolio-item wide"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1500&q=85" alt="Serviciu de coafură"><figcaption><span>01</span>Hair styling</figcaption></figure>
-      <figure class="portfolio-item"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1100&q=85" alt="Manichiură"><figcaption><span>02</span>Nail care</figcaption></figure>
-      <figure class="portfolio-item"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1100&q=85" alt="Produse de machiaj"><figcaption><span>03</span>Make-up</figcaption></figure>
-      <figure class="portfolio-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1100&q=85" alt="Îngrijirea părului"><figcaption><span>04</span>Hair care</figcaption></figure>
-      <figure class="portfolio-item wide"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1500&q=85" alt="Interior de salon"><figcaption><span>05</span>Atmosferă</figcaption></figure>
+    <section class="inner-hero inner-hero-gallery"><div><p class="eyebrow">Lucrări reale</p><h1>Inspirație în<br><em>fiecare detaliu.</em></h1></div><p>O selecție din lucrările echipei Salon Beauty Wow. Alege categoria dorită și apasă pe o fotografie pentru a o vedea mărită.</p></section>
+
+    <section class="portfolio section" aria-labelledby="gallery-title">
+      <div class="portfolio-heading">
+        <div><p class="eyebrow">Portofoliu</p><h2 id="gallery-title">Alege categoria</h2></div>
+        <div class="gallery-filters" role="group" aria-label="Filtre galerie">
+          <button class="gallery-filter active" type="button" data-filter="all">Toate</button>
+          <button class="gallery-filter" type="button" data-filter="hair">Coafor</button>
+          <button class="gallery-filter" type="button" data-filter="nails">Manichiură</button>
+          <button class="gallery-filter" type="button" data-filter="beauty">Cosmetică</button>
+          <button class="gallery-filter" type="button" data-filter="barber">Frizerie</button>
+        </div>
+      </div>
+
+      <div class="portfolio-grid" id="portfolio-grid">
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-01.jpg" alt="Coafură cu bucle lejere" loading="eager"></button><figcaption>Coafor · Styling</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-01.jpg" alt="Manichiură în nuanțe naturale" loading="lazy"></button><figcaption>Manichiură</figcaption></figure>
+        <figure class="portfolio-item" data-category="beauty"><button class="gallery-open" type="button"><img src="assets/gallery/beauty-01.jpg" alt="Laminare și stilizare sprâncene" loading="lazy"></button><figcaption>Sprâncene</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-01.jpg" alt="Tunsoare modernă pentru bărbați" loading="lazy"></button><figcaption>Frizerie</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-02.jpg" alt="Colorare în nuanță arămie" loading="lazy"></button><figcaption>Coloristică</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-02.jpg" alt="Manichiură elegantă cu detalii aurii" loading="lazy"></button><figcaption>Nail art</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-03.jpg" alt="Coafură cu bucle definite pe păr lung" loading="lazy"></button><figcaption>Coafură</figcaption></figure>
+        <figure class="portfolio-item" data-category="beauty"><button class="gallery-open" type="button"><img src="assets/gallery/beauty-02.jpg" alt="Stilizare profesională a sprâncenelor" loading="lazy"></button><figcaption>Cosmetică</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-02.jpg" alt="Tunsoare scurtă cu fade" loading="lazy"></button><figcaption>Fade</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-03.jpg" alt="Manichiură nude cu finisaj lucios" loading="lazy"></button><figcaption>Manichiură nude</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-04.jpg" alt="Păr lung drept după tratament" loading="lazy"></button><figcaption>Tratament păr</figcaption></figure>
+        <figure class="portfolio-item" data-category="beauty"><button class="gallery-open" type="button"><img src="assets/gallery/beauty-03.jpg" alt="Rezultate laminare sprâncene" loading="lazy"></button><figcaption>Laminare</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-03.jpg" alt="Tunsoare bărbătească cu contur curat" loading="lazy"></button><figcaption>Tuns bărbați</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-05.jpg" alt="Colorare roz pastel pe păr mediu" loading="lazy"></button><figcaption>Coloristică creativă</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-04.jpg" alt="Manichiură roșie cu detalii strălucitoare" loading="lazy"></button><figcaption>Nail art</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-06.jpg" alt="Balayage blond cu bucle lejere" loading="lazy"></button><figcaption>Balayage</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-04.jpg" alt="Tunsoare și aranjare barbă" loading="lazy"></button><figcaption>Hair & beard</figcaption></figure>
+        <figure class="portfolio-item" data-category="beauty"><button class="gallery-open" type="button"><img src="assets/gallery/beauty-04.jpg" alt="Stilizare sprâncene cu aspect natural" loading="lazy"></button><figcaption>Sprâncene</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-05.jpg" alt="Manichiură roz cu design geometric" loading="lazy"></button><figcaption>Design unghii</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-07.jpg" alt="Airtouch blond rece pe păr mediu" loading="lazy"></button><figcaption>Airtouch</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-05.jpg" alt="Tunsoare modernă și barbă conturată" loading="lazy"></button><figcaption>Barber</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-06.jpg" alt="Manichiură roz cu aplicații discrete" loading="lazy"></button><figcaption>Manichiură</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-08.jpg" alt="Păr blond lung și neted" loading="lazy"></button><figcaption>Îngrijire păr</figcaption></figure>
+        <figure class="portfolio-item" data-category="beauty"><button class="gallery-open" type="button"><img src="assets/gallery/beauty-05.jpg" alt="Laminare gene și sprâncene" loading="lazy"></button><figcaption>Gene & sprâncene</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-06.jpg" alt="Tunsoare pentru băieți cu fade" loading="lazy"></button><figcaption>Frizerie copii</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-07.jpg" alt="Manichiură roșie elegantă" loading="lazy"></button><figcaption>Manichiură clasică</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-09.jpg" alt="Balayage blond cu onduleuri" loading="lazy"></button><figcaption>Balayage</figcaption></figure>
+        <figure class="portfolio-item" data-category="beauty"><button class="gallery-open" type="button"><img src="assets/gallery/beauty-06.jpg" alt="Sprâncene stilizate și definite" loading="lazy"></button><figcaption>Cosmetică</figcaption></figure>
+        <figure class="portfolio-item" data-category="barber"><button class="gallery-open" type="button"><img src="assets/gallery/barber-07.jpg" alt="Tunsoare pentru băieți" loading="lazy"></button><figcaption>Frizerie copii</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-10.jpg" alt="Balayage blond pe păr lung" loading="lazy"></button><figcaption>Balayage & styling</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-08.jpg" alt="Manichiură nude cu roșu" loading="lazy"></button><figcaption>Nail design</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-11.jpg" alt="Colorare rose gold cu bucle" loading="lazy"></button><figcaption>Rose gold</figcaption></figure>
+        <figure class="portfolio-item" data-category="nails"><button class="gallery-open" type="button"><img src="assets/gallery/nails-09.jpg" alt="Manichiură în nuanțe roz" loading="lazy"></button><figcaption>Manichiură</figcaption></figure>
+        <figure class="portfolio-item" data-category="hair"><button class="gallery-open" type="button"><img src="assets/gallery/hair-12.jpg" alt="Blond rece cu șuvițe și styling" loading="lazy"></button><figcaption>Blond & styling</figcaption></figure>
+      </div>
+      <div class="gallery-more-wrap"><button class="button button-outline gallery-more" type="button">Vezi mai multe lucrări</button></div>
     </section>
+
     <section class="page-cta"><p class="eyebrow">Un look pentru tine</p><h2>Hai să discutăm</h2><p>Scrie-ne pentru detalii despre servicii și disponibilitate.</p><a class="button button-light" href="https://wa.me/40755331403" target="_blank" rel="noopener">Mesaj pe WhatsApp</a></section>
   </main>
-  <footer><a class="brand brand-footer" href="index.html"><img class="brand-logo" src="logo-salon-beauty-wow.jpeg" alt=""><span class="brand-name">Salon Beauty Wow</span></a><p>Salon de înfrumusețare · Iași</p><a href="index.html">Acasă ↑</a></footer><script src="script.js"></script>
-</body></html>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Fotografie mărită" hidden>
+    <button class="lightbox-close" type="button" aria-label="Închide fotografia">×</button>
+    <img src="" alt="">
+  </div>
+
+  <footer><a class="brand brand-footer" href="index.html"><img class="brand-logo" src="logo-salon-beauty-wow.jpeg" alt=""><span class="brand-name">Salon Beauty Wow</span></a><p>Salon de înfrumusețare · Tătărași, Iași</p><a href="index.html">Acasă ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

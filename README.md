@@ -1,6 +1,6 @@
-# Salon Beauty Wow Iași — model website
+# Salon Beauty Wow Iași
 
-Site static de prezentare, cu mai multe pagini, pentru Salon Beauty Wow din Iași.
+Site static de prezentare pentru Salon Beauty Wow din Tătărași, Iași.
 
 Pagini incluse: Acasă, Servicii, Despre, Galerie și Contact.
 
@@ -8,9 +8,12 @@ Pagini incluse: Acasă, Servicii, Despre, Galerie și Contact.
 
 Deschide `index.html` direct în browser sau pornește un server static în acest director.
 
-## Personalizare
+## Conținut
 
-- textele și lista serviciilor se confirmă cu salonul;
-- imaginile demonstrative se înlocuiesc cu fotografiile reale;
-- programul, rețelele sociale și adresa completă se actualizează înainte de publicarea finală;
-- numărul de contact folosit în model: `0755 331 403`.
+- date de contact și program reale;
+- galerie cu o selecție optimizată din fotografiile salonului;
+- tur video al salonului;
+- formular care deschide WhatsApp cu mesajul completat;
+- conținut SEO local și date structurate `BeautySalon`.
+
+Materialele originale primite de la clientă sunt păstrate local și excluse din Git. Site-ul public folosește doar fișierele optimizate din `assets/`.

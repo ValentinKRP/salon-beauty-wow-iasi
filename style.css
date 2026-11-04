@@ -23,6 +23,7 @@ body {
 }
 
 body.menu-open { overflow: hidden; }
+body.lightbox-open { overflow: hidden; }
 
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; }
@@ -125,7 +126,7 @@ h3 { font-family: "Italiana", serif; }
   min-height: 570px;
   background:
     linear-gradient(180deg, rgba(20, 20, 18, 0.02), rgba(20, 20, 18, 0.2)),
-    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=88") center/cover;
+    url("assets/salon-interior.jpg") center/cover;
 }
 .hero-note {
   position: absolute;
@@ -191,7 +192,7 @@ h3 { font-family: "Italiana", serif; }
 .about { background: var(--paper-deep); display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 9vw; align-items: center; }
 .about-image {
   min-height: 720px;
-  background: url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1300&q=85") center/cover;
+  background: url("assets/gallery/hair-06.jpg") center/cover;
 }
 .about-copy { max-width: 660px; }
 .about-copy h2 { margin-bottom: 38px; }
@@ -222,6 +223,7 @@ h3 { font-family: "Italiana", serif; }
   text-transform: uppercase;
   letter-spacing: .12em;
 }
+.section-link { margin-top: 34px; text-align: right; }
 
 .contact { background: var(--sage); color: var(--white); display: grid; grid-template-columns: 1.2fr .8fr; gap: 10vw; align-items: end; }
 .contact .eyebrow { color: #e8d3c6; }
@@ -261,7 +263,7 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .inner-hero h1 { margin: 0; }
 .inner-hero > p { max-width: 450px; color: var(--muted); font-size: 18px; }
 .inner-hero-services { background: linear-gradient(90deg, var(--paper) 0 66%, var(--paper-deep) 66%); }
-.inner-hero-about { background: linear-gradient(rgba(242,237,230,.82), rgba(242,237,230,.82)), url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=85") center/cover; }
+.inner-hero-about { background: linear-gradient(rgba(242,237,230,.8), rgba(242,237,230,.8)), url("assets/salon-interior.jpg") center/cover; }
 .inner-hero-gallery { background: var(--white); }
 
 .service-detail { padding-top: 60px; }
@@ -275,9 +277,10 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .detail-row.reverse > span { grid-column: 3; grid-row: 1; }
 .detail-row.reverse > div:nth-child(2) { grid-column: 3; grid-row: 1; padding-left: 35px; }
 .detail-image { min-height: 530px; background-size: cover; background-position: center; }
-.hair-image { background-image: url("https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85"); }
-.nails-image { background-image: url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85"); }
-.makeup-image { background-image: url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=85"); }
+.hair-image { background-image: url("assets/gallery/hair-10.jpg"); }
+.nails-image { background-image: url("assets/gallery/nails-04.jpg"); }
+.beauty-image { background-image: url("assets/gallery/beauty-02.jpg"); }
+.barber-image { background-image: url("assets/gallery/barber-04.jpg"); }
 
 .page-cta { padding: 110px 8vw; background: var(--sage); color: var(--white); text-align: center; }
 .page-cta .eyebrow { color: #e8d3c6; }
@@ -286,7 +289,9 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .page-cta .button { margin-top: 18px; }
 
 .story { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: center; }
-.story-image { min-height: 760px; background: url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1300&q=85") center/cover; }
+.story-media { min-width: 0; }
+.story-image { min-height: 620px; background: url("assets/salon-interior.jpg") center/cover; }
+.salon-tour { display: block; width: 100%; max-height: 620px; margin-top: 22px; background: var(--ink); object-fit: contain; }
 .story-copy h2 { margin-bottom: 35px; }
 .story-copy > p { color: var(--muted); }
 .story-copy .story-lead { font-family: "Italiana", serif; font-size: 30px; line-height: 1.35; color: var(--ink); }
@@ -298,13 +303,43 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .values-grid h3 { font-size: 32px; margin: 50px 0 18px; }
 .values-grid p { color: var(--muted); font-size: 14px; }
 
-.portfolio { background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.portfolio-item { margin: 0; }
-.portfolio-item.wide { grid-column: 1 / -1; }
-.portfolio-item img { height: 590px; object-fit: cover; }
-.portfolio-item.wide img { height: 720px; }
-.portfolio-item figcaption { display: flex; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); text-transform: uppercase; letter-spacing: .11em; font-size: 11px; }
-.portfolio-item figcaption span { color: var(--clay); }
+.portfolio { background: var(--white); }
+.portfolio-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 55px; }
+.portfolio-heading h2 { margin-bottom: 0; }
+.gallery-filters { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.gallery-filter {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.gallery-filter:hover, .gallery-filter.active { border-color: var(--ink); background: var(--ink); color: var(--white); }
+.portfolio-grid { columns: 3 280px; column-gap: 22px; }
+.portfolio-item { break-inside: avoid; margin: 0 0 22px; }
+.portfolio-item[hidden] { display: none; }
+.gallery-open { display: block; width: 100%; padding: 0; border: 0; background: var(--paper); cursor: zoom-in; overflow: hidden; }
+.gallery-open img { width: 100%; height: auto; max-height: 620px; object-fit: cover; transition: transform .45s ease; }
+.gallery-open:hover img { transform: scale(1.02); }
+.portfolio-item figcaption { padding: 11px 0; border-bottom: 1px solid var(--line); text-transform: uppercase; letter-spacing: .11em; font-size: 10px; }
+.gallery-more-wrap { margin-top: 42px; text-align: center; }
+.button-outline { border-color: var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.button-outline:hover { background: var(--ink); color: var(--white); }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 55px 24px 24px;
+  background: rgba(20, 20, 18, .92);
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { width: auto; max-width: min(1100px, 94vw); height: auto; max-height: calc(100vh - 85px); object-fit: contain; }
+.lightbox-close { position: absolute; top: 14px; right: 22px; border: 0; background: transparent; color: var(--white); font-size: 42px; font-weight: 300; cursor: pointer; }
 
 .contact-page { min-height: calc(100vh - 84px); display: grid; grid-template-columns: 1fr 1fr; }
 .contact-panel { padding: 100px 8vw; background: var(--sage); color: var(--white); }
@@ -313,6 +348,7 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .contact-cards { margin-top: 65px; border-top: 1px solid rgba(255,255,255,.3); }
 .contact-cards > * { display: grid; grid-template-columns: 100px 1fr; gap: 25px; padding: 23px 0; border-bottom: 1px solid rgba(255,255,255,.3); }
 .contact-cards span { font-size: 11px; text-transform: uppercase; letter-spacing: .13em; color: rgba(255,255,255,.6); }
+.contact-cards strong { line-height: 1.55; }
 .contact-form { padding: 100px 8vw; background: var(--white); }
 .contact-form label { display: block; margin-bottom: 25px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; margin-top: 9px; padding: 13px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font: inherit; outline: none; }
@@ -373,6 +409,9 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
   .detail-row.reverse > div:nth-child(2) { grid-column: 2; grid-row: 1; padding-left: 0; }
   .story, .values, .contact-page { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
+  .portfolio-heading { align-items: flex-start; flex-direction: column; }
+  .gallery-filters { justify-content: flex-start; }
+  .portfolio-grid { columns: 2 250px; }
 }
 
 @media (max-width: 680px) {
@@ -405,14 +444,18 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
   .gallery-card img, .gallery-card-tall img { height: 430px; }
   .contact { grid-template-columns: 1fr; gap: 65px; }
   .inner-hero { padding: 75px 24px 65px; min-height: 500px; }
+  .inner-hero h1 { font-size: clamp(42px, 11.5vw, 52px); }
   .inner-hero > p { font-size: 16px; }
   .detail-row { padding: 55px 0; gap: 15px; }
   .detail-image { min-height: 430px; margin-top: 20px; }
   .story { gap: 60px; }
   .story-image { min-height: 500px; }
-  .portfolio { grid-template-columns: 1fr; gap: 38px; }
-  .portfolio-item.wide { grid-column: auto; }
-  .portfolio-item img, .portfolio-item.wide img { height: 470px; }
+  .portfolio-grid { columns: 1; }
+  .portfolio-item { margin-bottom: 28px; }
+  .gallery-open img { max-height: none; }
+  .gallery-filters { gap: 7px; }
+  .gallery-filter { padding: 0 12px; }
+  .salon-tour { max-height: 520px; }
   .contact-panel, .contact-form { padding: 75px 24px; }
   .contact-cards > * { grid-template-columns: 75px 1fr; }
   .contact-actions { flex-direction: column; align-items: flex-start; }
