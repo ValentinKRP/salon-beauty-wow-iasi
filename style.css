@@ -357,6 +357,12 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--ink); }
 .contact-form textarea { resize: vertical; }
 .contact-form small { display: block; margin-top: 13px; color: var(--muted); }
+.contact-direct { display: grid; grid-template-rows: minmax(320px, 46vh) 1fr; min-width: 0; background: var(--white); }
+.contact-direct-image { background: linear-gradient(rgba(20,20,18,.04), rgba(20,20,18,.12)), url("assets/salon-interior.jpg") center/cover; }
+.contact-direct-copy { padding: clamp(55px, 6vw, 90px) 8vw; align-self: center; }
+.contact-direct-copy h2 { max-width: 560px; margin-bottom: 25px; font-size: clamp(42px, 4.5vw, 70px); }
+.contact-direct-copy > p:not(.eyebrow) { max-width: 520px; color: var(--muted); }
+.contact-direct-copy .button { margin-top: 18px; }
 
 .reveal { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
@@ -459,6 +465,8 @@ footer > a:last-child { justify-self: end; font-size: 13px; }
   .gallery-filter { padding: 0 12px; }
   .salon-tour { max-height: 520px; }
   .contact-panel, .contact-form { padding: 75px 24px; }
+  .contact-direct { grid-template-rows: 300px auto; }
+  .contact-direct-copy { padding: 65px 24px 75px; }
   .contact-cards > * { grid-template-columns: 75px 1fr; }
   .contact-actions { flex-direction: column; align-items: flex-start; }
   footer { grid-template-columns: 1fr auto; }

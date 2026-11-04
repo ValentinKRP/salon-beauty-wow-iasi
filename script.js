@@ -27,19 +27,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-const whatsappForm = document.querySelector('#whatsapp-form');
-
-whatsappForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(whatsappForm);
-  const name = data.get('name');
-  const phone = data.get('phone');
-  const service = data.get('service');
-  const message = data.get('message');
-  const text = `Bună ziua! Mă numesc ${name} și sunt interesată de ${service}.${phone ? ` Numărul meu este ${phone}.` : ''}${message ? ` Mesaj: ${message}` : ''}`;
-  window.open(`https://wa.me/40755331403?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
-});
-
 const galleryItems = [...document.querySelectorAll('.portfolio-item[data-category]')];
 const galleryFilters = [...document.querySelectorAll('.gallery-filter')];
 const galleryMore = document.querySelector('.gallery-more');
